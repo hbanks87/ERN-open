@@ -1,0 +1,6 @@
+path,exists,size_bytes
+C:\Users\hoytb\Desktop\MCS_ERN\gui_runs\effective_config_20260819_151655.yaml,True,1623.0
+examples\synthetic_demo\synthetic_trial_table.csv,True,381734.0
+examples\synthetic_demo\synthetic_metadata.csv,True,1325.0
+data\raw,False,
+data\events,False,

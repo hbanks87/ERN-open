@@ -1,0 +1,8 @@
+[project]
+name = "mcs-ern-flanker"
+version = "0.2.0"
+description = "A reproducible ERN/Flanker/anxiety analysis fork of the Master Comprehensive Suite engineering pattern."
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["mcs_ern_flanker"]

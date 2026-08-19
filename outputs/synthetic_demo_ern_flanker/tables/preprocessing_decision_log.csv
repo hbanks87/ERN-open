@@ -1,0 +1,4 @@
+module,status,detail
+config,loaded,C:\Users\hoytb\Desktop\MCS_ERN\gui_runs\effective_config_20260819_151655.yaml
+trial_table_pipeline,completed,amplitude_col=ern_uv
+primary_statistics,completed,anxiety_col=trait_anxiety

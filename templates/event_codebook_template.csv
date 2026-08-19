@@ -1,0 +1,7 @@
+column_name,required,description,example
+subject_id,yes,Participant identifier,sub-001
+trial_id,yes,Trial number,1
+condition,yes,error or correct,error
+correct,yes,1 correct / 0 error,0
+rt_ms,yes,Reaction time in milliseconds,423
+response_time_sec,for mne_raw,Response event time in seconds from raw start,123.456

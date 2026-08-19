@@ -1,0 +1,90 @@
+project:
+  run_label: synthetic_demo_ern_flanker
+  output_root: outputs
+input:
+  mode: trial_table
+  trial_table_csv: examples/synthetic_demo/synthetic_trial_table.csv
+  metadata_csv: examples/synthetic_demo/synthetic_metadata.csv
+  raw_dir: data/raw
+  raw_glob: '*.fif'
+  events_dir: data/events
+  events_glob: '*.csv'
+  subject_id_regex: (sub-[A-Za-z0-9]+|S[0-9]+|P[0-9]+)
+event_parsing:
+  subject_col: subject_id
+  trial_id_col: trial_id
+  condition_col: condition
+  correct_col: correct
+  rt_ms_col: rt_ms
+  response_time_sec_col: response_time_sec
+  error_values:
+  - error
+  - incorrect
+  - '0'
+  - 0
+  - false
+  - 'False'
+  - 'FALSE'
+  correct_values:
+  - correct
+  - '1'
+  - 1
+  - true
+  - 'True'
+  - 'TRUE'
+  min_rt_ms: 150
+  max_rt_ms: 1500
+preprocessing:
+  l_freq: 0.1
+  h_freq: 30.0
+  notch_freqs:
+  - 60.0
+  rereference: average
+  bad_channels: []
+  epoch_tmin_sec: -0.2
+  epoch_tmax_sec: 0.4
+  baseline_sec:
+  - -0.2
+  - 0.0
+  reject_peak_to_peak_uv: 150.0
+  ica:
+    enabled: false
+ern:
+  channels:
+  - FCz
+  - Cz
+  window_ms:
+  - 0
+  - 100
+  amplitude_method: mean
+  min_error_trials: 6
+  min_correct_trials: 20
+statistics:
+  anxiety_column: trait_anxiety
+  subject_col: subject_id
+  covariates:
+  - age
+sensitivity:
+  enabled: true
+  windows_ms:
+  - - 0
+    - 100
+  - - -50
+    - 100
+  - - 0
+    - 150
+  channel_clusters:
+  - - FCz
+  - - Cz
+  - - FCz
+    - Cz
+  amplitude_methods:
+  - mean
+  - peak
+  artifact_threshold_uv:
+  - 100.0
+  - 150.0
+  - 200.0
+reporting:
+  make_figures: true
+  plain_language_report: true

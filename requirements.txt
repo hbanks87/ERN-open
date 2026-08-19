@@ -1,0 +1,7 @@
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+matplotlib>=3.6
+PyYAML>=6.0
+mne>=1.4
+statsmodels>=0.13

@@ -1,0 +1,8 @@
+{
+  "schema": "MCS_ERN_Flanker_analysis_manifest_v0_2",
+  "run_label": "synthetic_demo_ern_flanker",
+  "config_path": "C:\\Users\\hoytb\\Desktop\\MCS_ERN\\gui_runs\\effective_config_20260819_151655.yaml",
+  "output_dir": "outputs\\synthetic_demo_ern_flanker",
+  "input_mode": "trial_table",
+  "boundary": "ERN/Flanker analysis only; not PRAYCG/narrative/meaning analysis."
+}
